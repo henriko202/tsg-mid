@@ -1,6 +1,5 @@
 // exercise 1: Create a calculator that takes two numbers and an operator (+, -, *, /) and returns the result of the operation.
 
-// We use the readline module from node (available since node 7) to read from the console.
 import * as readline from 'node:readline/promises'
 import { stdin as input, stdout as output } from 'node:process'
 
@@ -21,7 +20,6 @@ function calculate(firstNumber, secondNumber, operator) {
 
 const readLineInterface = readline.createInterface({ input, output })
 
-// We use an async function to be able to use the await keyword.
 async function main() {
   let firstNumber = NaN
 
