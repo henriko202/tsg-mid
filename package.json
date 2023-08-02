@@ -1,0 +1,17 @@
+{
+  "name": "tsg-mid",
+  "type": "module",
+  "scripts": {
+    "exercise-1": "node exercise-1/main.js",
+    "exercise-2": "node exercise-2/main.js",
+    "exercise-3": "node exercise-3/main.js",
+    "exercise-4": "node exercise-4/main.js",
+    "exercise-5": "node exercise-5/main.js",
+    "exercise-6": "node exercise-6/main.js",
+    "exercise-7": "node exercise-7/main.js",
+    "exercise-8": "node exercise-8/main.js"
+  },
+  "engines": {
+    "node": ">=12.0.0"
+  }
+}
