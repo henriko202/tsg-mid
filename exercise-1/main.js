@@ -46,7 +46,8 @@ async function main() {
   let operator = ''
 
   // First we check if the operator has a valid length to avoid checking if it is included in the array.
-  // Thus, lowering just a little tiny bit of the complexity of the code.
+  // Thus, lowering just a little tiny bit of the overall complexity.
+  // Even if we didn't do this, the complexity would still be O(1) since the array is always the same size.
   while (operator.length !== 1 || !['+', '-', '*', '/'].includes(operator)) {
     operator = await readLineInterface.question('Enter the operator (+, -, *, /): ')
 
