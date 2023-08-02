@@ -23,12 +23,12 @@ const readLineInterface = readline.createInterface({ input, output })
 
 // We use an async function to be able to use the await keyword.
 async function main() {
-  let FirstNumber = NaN
+  let firstNumber = NaN
 
-  while (isNaN(FirstNumber)) {
-    FirstNumber = Number(await readLineInterface.question('Enter the first number: '))
+  while (isNaN(firstNumber)) {
+    firstNumber = Number(await readLineInterface.question('Enter the first number: '))
 
-    if (isNaN(FirstNumber)) {
+    if (isNaN(firstNumber)) {
       console.log('Invalid number')
     }
   }
@@ -59,18 +59,18 @@ async function main() {
   let calculateResult = 0
 
   try {
-    calculateResult = calculate(FirstNumber, secondNumber, operator)
+    calculateResult = calculate(firstNumber, secondNumber, operator)
   } catch (error) {
     console.log(error)
     return
   }
 
   if (!isFinite(calculateResult)) {
-    console.log(`${FirstNumber} ${operator} ${secondNumber} = Invalid result!`)
+    console.log(`${firstNumber} ${operator} ${secondNumber} = Invalid result!`)
     return
   }
 
-  console.log(`${FirstNumber} ${operator} ${secondNumber} = ${calculateResult}`)
+  console.log(`${firstNumber} ${operator} ${secondNumber} = ${calculateResult}`)
 }
 
 // We want to always close the interface, even if an error occurs.
