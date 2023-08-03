@@ -14,10 +14,10 @@ const readLineInterface = readline.createInterface({ input, output })
 async function main() {
   let inputNumber = NaN
 
-  while (isNaN(inputNumber)) {
-    inputNumber = Number(await readLineInterface.question('Enter the number to display the table of: '))
+  while (isNaN(inputNumber) || inputNumber === '') {
+    inputNumber = await readLineInterface.question('Enter the number to display the table of: ')
 
-    if (isNaN(inputNumber)) {
+    if (isNaN(inputNumber) || inputNumber === '') {
       console.log('The input is not a number.')
     }
   }

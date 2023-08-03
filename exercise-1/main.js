@@ -23,8 +23,8 @@ const readLineInterface = readline.createInterface({ input, output })
 async function main() {
   let firstNumber = NaN
 
-  while (isNaN(firstNumber)) {
-    firstNumber = Number(await readLineInterface.question('Enter the first number: '))
+  while (isNaN(firstNumber) || firstNumber === '') {
+    firstNumber = await readLineInterface.question('Enter the first number: ')
 
     if (isNaN(firstNumber)) {
       console.log('Invalid number')
@@ -33,8 +33,8 @@ async function main() {
 
   let secondNumber = NaN
 
-  while (isNaN(secondNumber)) {
-    secondNumber = Number(await readLineInterface.question('Enter the second number: '))
+  while (isNaN(secondNumber) || secondNumber === '') {
+    secondNumber = await readLineInterface.question('Enter the second number: ')
 
     if (isNaN(secondNumber)) {
       console.log('Invalid number')
